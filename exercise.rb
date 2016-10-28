@@ -11,7 +11,7 @@ class Exercise
         word = "marklar"
       end
     end
-    str
+    return str
   end
 
 

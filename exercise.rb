@@ -4,8 +4,13 @@ class Exercise
   # If the word being replaced has a capital first letter, it should instead be replaced with "Marklar".
   def self.marklar(str)
     # TODO: Implement this method
-    str.gsub!(/[A-Za-z]+{5,}/, "marklar")
-    str.gsub!(/[A-Z][a-z]+{5,}/, "Marklar")
+    str.gsub!(/[A-Za-z]+{5,}/) do |word|
+      if word == word.capitalize
+        word = "Marklar"
+      else
+        word = "marklar"
+      end
+    end
     str
   end
 

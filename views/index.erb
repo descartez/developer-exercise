@@ -4,26 +4,46 @@
   <meta charset="utf-8">
   <title>Hey there Jaguar!</title>
   <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="app.js"></script>
 </head>
 <body>
-  <h1>
-    Hey there Jaguar!
-  </h1>
-  <h2>
-    What is this?
-  </h2>
-  <p>
-    This page is a front end to my solutions to the lovely challenge you wrote. It combines jQuery and the Sinatra Ruby gem to give you an interactive version to my solutions.
-  </p>
-  <h3>Marklar the string!</h3>
-  <p><strong>The Challenge:</strong> Assume that "str" is a sequence of words separated by spaces. Return a string in which every word in "str" that exceeds 4 characters is replaced with "marklar". If the word being replaced has a capital first letter, it should instead be replaced with "Marklar".</p>
-  <form>
-    <input value="There goes Frasier." id="marklar-input"></input>
-    <button id="marklar-button">marklar</button>
-  </form>
-  <p>Output: <span id="marklar-output"></span></p>
-  <h2>
-    A little about me:
-  </h2>
+  <div class='container'>
+    <div class='row'>
+      <h1>
+        Hey there Jaguar!
+      </h1>
+      <h2>
+        What is this?
+      </h2>
+      <p>
+        This page is a front end to my solutions to the lovely challenges you wrote. It combines jQuery and the Sinatra Ruby gem to give you an interactive version to my solutions.
+      </p>
+    </div>
+    <div class='row'>
+      <div class='col-md-6'>
+        <h3>Marklar the string</h3>
+        <p><strong>The Challenge:</strong> Assume that "str" is a sequence of words separated by spaces. Return a string in which every word in "str" that exceeds 4 characters is replaced with "marklar". If the word being replaced has a capital first letter, it should instead be replaced with "Marklar".</p>
+        <form class='form-inline'>
+          <input class='form-control' value="Down goes Frasier." id="marklar-input"></input>
+          <button class='btn btn-primary' id="marklar-button">marklar</button>
+        </form>
+
+        <p class="output"><strong>Output:</strong> <span id="marklar-output"></span></p>
+      </div>
+      <div class='col-md-6'>
+        <h3>Even Fib Sum</h3>
+        <p><strong>The Challenge:</strong> Return the sum of all even numbers in the Fibonacci sequence, up to the "nth" term in the sequence eg. the Fibonacci sequence up to 6 terms is (1, 1, 2, 3, 5, 8), and the sum of its even numbers is (2 + 8) = 10</p>
+        <form class='form-inline'>
+          <input class='form-control' type="number" min=0 value=0 id="fib-input"></input>
+          <button class='btn btn-primary' id="fib-button">fibonacci!</button>
+        </form>
+        <p class="output"><strong>Output:</strong> <span id="fib-output"></span></p>
+      </div>
+    </div>
+    <h2>
+      A little about me:
+    </h2>
+  </div>
 </body>
 </html>

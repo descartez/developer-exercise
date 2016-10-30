@@ -10,6 +10,11 @@ var bindEventListeners = function(){
     marklarSignal();
     console.log("marklar button pressed");
   })
+  $('#fib-button').click(function(e){
+    e.preventDefault();
+    fibSignal();
+    console.log("fib button has been pressed")
+  })
 }
 
 var marklarSignal = function() {
@@ -18,11 +23,29 @@ var marklarSignal = function() {
     url: "/marklar",
     type: 'put',
     data: {string: string}
-  }).failure(function(reponse){
+  }).fail(function(reponse){
     console.log("MARKLAR FAIL")
-    $("#marklar-output").text(response)
+    $("#marklar-output").text(response.str)
   }).success(function(response){
     console.log("MARKLAR SUCCESS")
-    $("#marklar-output").text(response)
+    $("#marklar-output").text(response.str)
+  })
+}
+
+var fibSignal = function(){
+    fibNum = $('#fib-input').val()
+    $.ajax({
+      url: "/evenfib",
+      type: 'put',
+      data: {fib: fibNum}
+    }).fail(function(reponse){
+    console.log("FIB FAIL")
+    $("#fib-output").text(response.fib)
+    console.log(response.fib)
+
+  }).success(function(response){
+    console.log("FIB SUCCESS")
+    console.log(response.fib)
+    $("#fib-output").text(response.fib)
   })
 }

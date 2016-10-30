@@ -22,18 +22,15 @@ class Exercise
   # and the sum of its even numbers is (2 + 8) = 10
   def self.even_fibonacci(nth)
     # TODO: Implement this method
-    self.calculate_fib_even(nth)
-  end
-
-  def self.calculate_fib_even(n, cache={})
-    if n <= 1
-      return n
+    sum = 0
+    a, b = 1, 1
+    c = a + b
+    while c <= nth
+      sum = sum + c
+      a = b + c
+      b = c + a
+      c = a + b
     end
-    cache[n] ||= 4*(calculate_fib_even(n-1, cache)) + calculate_fib_even(n-1, cache)
-    even_sum = 0
-    cache.each do |n|
-      even_sum += n[0]
-    end
-    return even_sum
+    return sum
   end
 end

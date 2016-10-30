@@ -6,5 +6,5 @@ get '/' do
 end
 
 put '/marklar' do
-
+  return Exercise.marklar(params[:string])
 end

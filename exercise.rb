@@ -7,6 +7,8 @@ class Exercise
     str.gsub!(/[A-Za-z]+{5,}/) do |word|
       if word == word.capitalize
         word = "Marklar"
+      elsif word == word.upcase
+        word = "MARKLAR"
       else
         word = "marklar"
       end

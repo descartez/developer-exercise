@@ -5,23 +5,27 @@
   <title>Hey there Jaguar!</title>
   <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="app.css">
   <script src="app.js"></script>
 </head>
 <body>
-  <div class='container'>
-    <div class='row'>
-      <h1>
+      <h1 class="greeting">
         Hey there Jaguar!
       </h1>
+  <div class='container'>
+    <div class='row'>
       <h2>
         What is this?
       </h2>
+      <p>
+        I'm Ryan Stong. I built this with my two hands.
+      </p>
       <p>
         This page is a front end to my solutions to the lovely challenges you wrote. It combines jQuery and the Sinatra Ruby gem to give you an interactive version to my solutions.
       </p>
     </div>
     <div class='row'>
-      <div class='col-md-6'>
+      <div class='col-md-6 box'>
         <h3>Marklar the string</h3>
         <p><strong>The Challenge:</strong> Assume that "str" is a sequence of words separated by spaces. Return a string in which every word in "str" that exceeds 4 characters is replaced with "marklar". If the word being replaced has a capital first letter, it should instead be replaced with "Marklar".</p>
         <form class='form-inline'>
@@ -31,7 +35,7 @@
 
         <p class="output"><strong>Output:</strong> <span id="marklar-output"></span></p>
       </div>
-      <div class='col-md-6'>
+      <div class='col-md-6 box'>
         <h3>Even Fib Sum</h3>
         <p><strong>The Challenge:</strong> Return the sum of all even numbers in the Fibonacci sequence, up to the "nth" term in the sequence eg. the Fibonacci sequence up to 6 terms is (1, 1, 2, 3, 5, 8), and the sum of its even numbers is (2 + 8) = 10</p>
         <form class='form-inline'>
@@ -44,6 +48,12 @@
     <h2>
       A little about me:
     </h2>
+    <p>
+      I currently develop in Rails at a manufacturing company in Santa Fe Springs. My current responsibilities are building a system that uses web-enabled odometers to track machine up time and material usage. I am the only developer on the team, which means I've learned to iterate quickly based on multiple team members' inputs, know my limits and research to fulfill the team's needs.
+    </p>
+    <p>
+      I am design minded and a dogged problem solver. If you'd like to talk you can email me at rvanstong@gmail.com, see my <a href="/img/Ryan Stong Simplest CV.pdf">resumé</a>, or look at my personal <a href="http://dezdoes.tech">website</a>. I look forward to hearing from you!
+    </p>
   </div>
 </body>
 </html>

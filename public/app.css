@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Aguafina+Script');
+body {
+  color: #666666;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4 {
+  color: #DB6117;
+}
+
+.greeting {
+  background-color: #9BC03C;
+  margin-top: -0.25%;
+  padding: 15px;
+  color: black;
+  font-family: 'Aguafina Script', cursive;
+  font-size: 4em;
+}
+
+.box {
+}
+
+.output {
+  margin-top: 5px;
+  padding: 2px;
+  font-size: 1.2em;
+}

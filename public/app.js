@@ -1,6 +1,8 @@
 $(document).ready(function() {
   bindEventListeners();
-  console.log("app.js loaded!");
+  console.log("Hey, how'd you get here?");
+  console.log("If you want to say hey back, execute the 'hello' function");
+
 });
 
 
@@ -48,4 +50,10 @@ var fibSignal = function(){
     console.log(response.fib)
     $("#fib-output").text(response.fib)
   })
+}
+
+var hello = function(){
+  console.log("Well ain't that just the friendliest!")
+  console.log("I'm glad you checked here.")
+  console.log("If you'd like to talk a bit more in person, feel free to call my cell at (714) 330-3199.")
 }
